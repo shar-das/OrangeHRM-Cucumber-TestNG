@@ -4,10 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        plugin = {"html:reports/cucumber-reports.html"},
+        plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         features = {"classpath:features"},
         glue = {"classpath:stepDefinitions"},
-        tags = "@ClickResetPassword"
+        tags = "@ValidLogin"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {
